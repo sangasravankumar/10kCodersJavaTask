@@ -1,0 +1,519 @@
+1. Write an if statement to check if a person is an adult (age 18 or older) and display an appropriate message.
+
+Ans :   
+-----       	int age = 16;
+		if(age >= 18)
+			System.out.println("Eligible for voting");
+
+
+2. Create a program that checks if a number is positive and prints "Positive number" if it is.
+
+Ans : 
+-----
+                  int a = -1;
+		  if(a > 0)
+  			System.out.println("Positive Number");
+
+
+
+
+3. Write code to determine if a student passed or failed based on a score (passing score is 60 or above).
+
+Ans : 
+		int a = 70;
+		if(a >= 60)
+			System.out.println("Passed");
+		else
+  	                System.out.println("Failed");	
+
+
+4. Create a program that checks if a number is even or odd and displays an appropriate message.
+
+Ans : 
+               int a = 4;
+		if(a % 2 == 0)
+			System.out.println("Even Number");
+		else 
+ 			System.out.println("Odd Number");
+
+
+5. Write a program that assigns a letter grade based on a numerical score:
+   - 90+ is an A
+   - 80-89 is a B
+   - 70-79 is a C
+   - 60-69 is a D
+   - Below 60 is an F
+
+Ans: 
+  		int score = 89;
+		
+		if(score >= 90)
+			System.out.println("A grade");
+		else if(score >= 80 && score <= 89)
+			System.out.println("B grade");			
+		else if(score >= 70 && score <= 79)
+			System.out.println("C grade");
+		else if(score >= 60 && score <= 69)
+			System.out.println("D grade");
+		else
+			System.out.println("F grade");
+
+6. Create a program that displays a message based on the current hour (use 24-hour format):
+   - 5-11: "Good morning"
+   - 12-16: "Good afternoon"
+   - 17-20: "Good evening"
+   - 21-4: "Good night"
+		
+Ans : 		
+			int time = 2;
+
+			if(time >= 0 && time <= 4)
+				System.out.println("Mid Night");
+			else if(time >= 5 && time <= 11)
+				System.out.println("Good Morning");
+			else if(time >= 12 && time <= 16)
+				System.out.println("Good Afternoon");
+			else if(time >= 17 && time <= 20)
+				System.out.println("Good Evening");
+			else if(time >= 21 && time <= 24)
+				System.out.println("Good Night");
+			else
+				System.out.println("Invalid time");
+
+7. Write code that checks if a person can drive by verifying both age (18+) and whether they have a license.
+
+Ans : 
+			
+		int age = 18;
+		boolean isHavingLicense = true;
+		
+			if(age >= 18){
+				if(isHavingLicense)
+					System.out.println("Verification success");
+				else
+					System.out.println("Verification Failed");
+			}else{
+				System.out.println("Still Minor or Invalid Age");
+			}
+
+
+
+8. Create a program that checks if a user can access premium content by verifying they have an account, are logged in, and have premium status.
+
+Ans 
+---		
+		boolean isUser = true;
+		boolean isLoggedIn = false;
+		boolean isPremium = false;
+		
+		if(isUser){
+			if(isLoggedIn && isPremium)
+				System.out.println("Watch Premium content");	
+			else if(isLoggedIn)
+				System.out.println("Subscribe for premium content.");
+			else
+				System.out.println("Invalid Credentials");
+		}
+		else{
+			System.out.println("Create an account.");
+		}	
+
+9. Write a switch statement that prints the name of a day based on a number (1-7).
+Ans :
+                  public class Daysname
+{
+public static void main ( String args [])
+{ 
+int a=1;
+switch (a)
+{
+		case 1 :
+                        System.out.println("Mon");
+                        break;
+                  case 2 :
+                        System.out.println("Tue");
+                        break;
+                  case 3 :
+                        System.out.println("Wed");
+                        break;
+		case  4 :
+                        System.out.println("Thur");
+                        break;
+		case 5 :
+                        System.out.println("Fri");
+                        break;
+		case 6 :
+                        System.out.println("Sat");
+                        break;
+		case 7 :
+                        System.out.println("Sun");
+                        break;
+                  }
+}
+}
+
+10. Create a switch statement that performs basic arithmetic operations (+, -, *, /) based on a character input.
+public class Arthmeticwithchar
+{
+public static void main ( String args [])
+{ 
+char c='+';
+int  a=10;
+int b=2;
+int d;
+switch (c)
+{
+		case '+' :
+                        d=a+b;
+                        System.out.println("Addition of a and b" + d);
+                        break;
+                  case '-' :
+			d=a-b;
+                        System.out.println("sub of a and b " + d );
+                        break;
+                  case '*' :
+			d=a*b;
+                        System.out.println("mul of a and b"+d);
+                        break;
+		case  '/' :
+			d=a/b;
+                        System.out.println("div of a and b"+d);
+                        break;
+		case '%':
+			d=a%b;
+                        System.out.println("mod of a and b"+d);
+                        break;
+		default:
+                      System.out.println("Invalid operators");
+                  }
+}
+}
+ 
+11. Use the ternary operator to assign "Good day" or "Good evening" to a variable based on the time (before or after 18:00).
+	public class TenaryTime {
+	public static void main(String[] args) {
+		int num = 19;
+        String result = (num>=18) ? "Good Evening" : "Good Day";
+        System.out.println(result);
+	}
+}
+
+12. Write a program using the ternary operator to determine if a number is positive, negative, or zero.
+	public class TenaryNumber {
+	public static void main(String[] args) {
+		int num=7;
+		if(num==0) {
+			System.out.println("Zero");
+		}
+		else {
+			String result = (num>0) ? "Postive" : "Negative";
+	        System.out.println(result);
+		}
+	}
+
+}
+
+
+13. Write a program that checks if a person is eligible for a premium card based on age (21+) and income (40000+).
+int age =24;
+int income=60000;
+if age>=21
+{
+if income>=40000
+{
+System.out.println("Eligible for premium card");
+}
+}
+else
+{
+System.out.println("Not Elgible");
+}
+
+14. Create a program that grants access to a VIP lounge if the membership is either "Gold" or "Platinum".
+public class VipMembership {
+	public static void main(String[] args) {
+		String vip="Platinum";
+		if (vip=="Gold" || vip=="Platinum") {
+			System.out.println("Having Vip Membership");
+		}
+		else {
+			System.out.println("No membership");
+		}
+		
+	}
+
+}
+
+15. Write code to validate a password that checks if it's not null, not empty, and at least 8 characters long.
+
+Ans : 
+----
+			String password = "123456789";
+			
+			if(password == null)
+				System.out.println("Null not allowed");
+			else if(password.isEmpty())
+				System.out.println("Empty password is not allowed");
+			else if(password.length() < 8)
+				System.out.println("Password should be 8 characters long");
+			else 
+				System.out.println("Valid Password");
+				
+16. Create a basic email validator that checks if an email contains both "@" and "." characters.
+Ans :
+                       String str = "xyz@gmail.com";
+		
+		       if(str.contains("@") && str.contains("."))
+				System.out.println("Valid Email");
+		       else 
+				System.out.println("Not a valid email");
+
+
+
+17. Write a program to determine if a year is a leap year (divisible by 4 but not 100, or divisible by 400).
+
+public class LeapYear {
+public static void main(String[] args) {
+int year=2022;
+if (year%4==0 && year%100==0 || year%400==0)
+{
+System.out.println("is leapyear");
+}
+else
+{
+System.out.println("is not leapyear");	
+}
+}
+}
+18. Create a BMI calculator that categorizes a person as:
+    - Underweight (BMI < 18.5)
+    - Normal weight (BMI 18.5-24.9)
+    - Overweight (BMI 25-29.9)
+    - Obese (BMI 30+)
+
+public class Personweight
+{
+public static void main (String [] args)
+{
+float weight= 26.0f;
+if (weight <18.5f)
+{
+System.out.println("Underweight");
+} 
+else if (weight>=18.5f && weight<=24.9f)
+{
+System.out.println("Normal weight");
+}
+else if (weight>=25.0f && weight<=29.9f)
+{
+System.out.println("Overweight");
+}
+else if (weight>=30.0f)
+{
+System.out.println("Obese");
+}
+}
+}
+19. Write a program that determines a person's age category:
+    - Child: Under 13
+    - Teenager: 13-17
+    - Adult: 18-64
+    - Senior: 65+
+
+public class Personage
+{
+public static void main (String [] args)
+{
+int age= 14;
+if (age<13)
+{
+System.out.println("Child");
+}
+else if (age>=13 && age<=17)
+{
+System.out.println("Teenager");
+}
+else if (age>=18 && age<=64)
+{
+System.out.println("Adult");
+}
+else 
+{
+System.out.println("Senior");
+}
+}
+}
+
+20. Create a method that returns the maximum of two numbers using conditional statements.
+	package com.max;
+
+	public class MaxNumber {
+	public static void main(String[] args) {
+		int a=24;
+		int b=21;
+		if(a==b) {
+			System.out.println("Both are equal");
+		}
+		else {
+			if(a>b){
+				System.out.println("Greater Number is A="+a);
+			}
+			else {
+				System.out.println("Greater Number is B="+b);
+			}
+		}
+	}
+
+}
+21. Write a program that evaluates a traffic light situation:
+    - If the light is green, print "Go"
+    - If the light is yellow, print "Slow down"
+    - If the light is red, print "Stop"
+    - If it's any other color, print "Invalid traffic light"
+
+public class TrafficLight
+{
+public static void main (String args[])
+{
+String light="Blue";
+if (light=="Green")
+	System.out.println("Go");
+else if (light=="Yellow")
+	System.out.println("slow down");
+else if (light=="Red")
+	System.out.println("Stop");
+else
+System.out.println("invalid light");
+}
+} 
+
+22. Create a program that validates a username:
+    - Must not be null
+    - Must not be empty
+    - Must be between 3 and 20 characters
+    - Print appropriate error messages
+
+public class UserValidate {
+	public static void main(String[] args) {
+		String username="1234abc";
+		if(username==null) {
+			System.out.println("UserName is Null");
+		}
+		else if(username.isEmpty()) {
+			System.out.println("UserName is empty");
+		}
+		else if(username.length()>=3 && username.length()<=20) {
+			System.out.println("UserName is: "+username);
+		}
+		else 
+		{
+			System.out.println("Not a valid Username");
+		}
+	}
+
+}
+
+ 
+
+23. Write code that determines the season based on a month number:
+    - Winter: 12, 1, 2
+    - Spring: 3, 4, 5
+    - Summer: 6, 7, 8
+    - Fall: 9, 10, 11
+
+public class Isvowelorconstant
+{
+public static void main (String [] args)
+{
+int month =13;
+if ((month==12) || (month==1) || (month==2) )
+{
+    System.out.println("winter");
+}
+else if  ((month==3) || (month==4) || (month==5) )
+{
+    System.out.println("spring");
+}
+else if ((month==6) || (month==7) || (month==8) )
+{
+    System.out.println("summer");
+}
+else if ((month==9) || (month==10) || (month==11) )
+{
+    System.out.println("Fall");  
+}
+else 
+{
+    System.out.println("Total months is 12 for year");
+}
+}
+}
+
+24. Write a program that checks if a character is a letter, digit, or special character.
+	public class CheckCharacter {
+	public static void main(String[] args) {
+		char character='&';
+		if (Character.isLetter(character)) {
+            System.out.println("The character is a letter");
+        } else if (Character.isDigit(character)) {
+            System.out.println("The character is a digit");
+        } else {
+            System.out.println("The character is a special character");
+        }
+	}
+}
+
+
+
+25. Write code that calculates shipping cost based on order total:
+    - Free shipping for orders $50+
+    - $5.99 shipping for orders $20-$49.99
+    - $9.99 shipping for orders under $20
+
+public class Isvowelorconstant
+{
+public static void main (String [] args)
+{
+int totalorder = 18;
+if (totalorder<20)
+{
+System.out.println("shipping cost is $9.99");
+}
+else if ((totalorder >=20) && (totalorder<=49.99))
+{
+System.out.println("Shipping cost is $5.99");
+}
+else
+{
+System.out.println("free Shipping cost");
+}
+}
+}
+
+
+26. Write code that determines if a character is a vowel or consonant.
+
+public class Isvowelorconstant
+{
+public static void main (String [] args)
+{
+char c='z';
+if ((c=='a') ||  (c=='e') || (c=='i')||(c=='o') || (c=='u'))
+{
+System.out.println("Vowel");
+}
+else
+{
+System.out.println("Constant");
+}
+}
+}
+
+
+
+
+
+
+
+
+
